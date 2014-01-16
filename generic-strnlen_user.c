@@ -1,3 +1,5 @@
+/* GPL: from linux/lib/strnlen_user.c and <asm/word-at-a-time.h> */
+
 struct word_at_a_time {
 	const unsigned long one_bits, high_bits;
 };     

@@ -1,3 +1,5 @@
+/* GPL: from linux/arch/arm64/lib/strnlen_user.S */
+
 #define ALIGN	.align 4
 #define ENTRY(n)	\
 	.global n;	\
