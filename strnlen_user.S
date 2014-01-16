@@ -15,7 +15,7 @@ ENTRY(__strnlen_user)
 	mov     x2, x0
 1:	subs    x1, x1, #1
 	b.mi    2f
-	ldrb   w3, [x0], #1
+	ldrb    w3, [x0], #1
 	cbnz    w3, 1b
 2:	sub     x0, x0, x2
 	ret

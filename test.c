@@ -8,11 +8,14 @@ const char foo[] = "HELLO WORLD!";
 
 unsigned long fixed__strnlen_user(const char *s, long n)
 {
-	unsigned long res = 0;
+	unsigned long res;
+
+	if (n <= 0)
+		return 0;
 
 	res = __strnlen_user(s, n);	
 
-	if (n && res >= n)
+	if (res >= n)
 		return n+1;
 
 	return res;
